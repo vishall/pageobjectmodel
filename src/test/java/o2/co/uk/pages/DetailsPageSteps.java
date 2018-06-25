@@ -8,19 +8,6 @@ public class DetailsPageSteps {
 
 
 
-    private  static WebDriver driver = null;
-
-    public static void main(String[] args) {
-
-        System.setProperty("webdriver.chrome.driver", "//home//vishalloke//IdeaProjects//pageObjectModel//src//main//resources//driver//linux//chromedriver");
-        driver = new ChromeDriver();
-        driver.get("http://www.google.com");
-
-
-    }
-
-
-
 
 
 
