@@ -13,11 +13,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 
-
 public class TariffExtrasPageSteps {
 
 
-    private  static WebDriver driver = null;
+    private static WebDriver driver = null;
 
     @Given("^I am on google home page$")
     public void i_am_on_google_home_page() throws Throwable {
@@ -49,8 +48,6 @@ public class TariffExtrasPageSteps {
     }
 
 
-
-
-        }
+}
 
 

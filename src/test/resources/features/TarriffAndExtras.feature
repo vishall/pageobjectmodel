@@ -1,6 +1,6 @@
 Feature: Google website
 
-Scenario: Checking google home page
+  Scenario: Checking google home page
 
     Given I am on google home page
     When I click in the search text box
