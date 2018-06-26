@@ -20,7 +20,6 @@ public class TariffExtrasPageSteps {
 
     @Given("^I am on google home page$")
     public void i_am_on_google_home_page() throws Throwable {
-        System.setProperty("webdriver.chrome.driver", "chromedriver");
         driver = new ChromeDriver();
         driver.get("http://www.google.com");
 
