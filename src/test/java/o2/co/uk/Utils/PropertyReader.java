@@ -8,35 +8,26 @@ import java.util.Properties;
 public class PropertyReader {
 
 
-    public static Properties getConfigProperties() {
+    private final Properties proper;
 
-        Properties prop = new Properties();
-        InputStream input = null;
+    public PropertyReader(final String propertyFile) {
 
+        InputStream ip = getClass().getClassLoader().getResourceAsStream(propertyFile);
+
+        proper = new Properties();
         try {
 
-            input = new FileInputStream("src/test/resources/config.properties");
-
-            // load a properties file
-            prop.load(input);
-
-
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        } finally {
-            if (input != null) {
-                try {
-                    input.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
+            proper.load(ip);
+        } catch (final IOException e) {
+            throw new RuntimeException(e);
         }
-        return prop;
+    }
+
+    public String getProperty(final String properName) {
+
+        return proper.getProperty(properName);
     }
 }
-
-
 
 
 

@@ -15,7 +15,7 @@ import org.openqa.selenium.WebElement;
 public class TariffExtrasPageSteps extends CommonPageSteps {
 
 
-    private static WebDriver driver = null;
+    private static WebDriver driver= null;
 
     TariffExtrasPage tariffExtrasPage;
 
@@ -27,7 +27,7 @@ public class TariffExtrasPageSteps extends CommonPageSteps {
 
     @When("^I click in the search text box$")
     public void i_click_in_the_search_text_box() throws Throwable {
-      tariffExtrasPage.enterDetailsInSearchBox("Hello");
+      tariffExtrasPage.enterDetailsInSearchBox();
 
     }
 

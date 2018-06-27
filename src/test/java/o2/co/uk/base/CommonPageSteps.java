@@ -7,12 +7,14 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class CommonPageSteps {
 
+    private final PropertyReader propertyReader = new PropertyReader("config.properties");
+
     Browser browser;
 
     public Browser browser() {
         if (browser == null) {
             WebDriver driver = null;
-            String browserType = PropertyReader.getConfigProperties().getProperty("browser");
+            String browserType = propertyReader.getProperty("browser");
             if (browserType.equals("chrome")) {
                 driver = new ChromeDriver();
             } else if (browserType.equals("Firefox")) {
