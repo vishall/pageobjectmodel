@@ -12,8 +12,7 @@ repositories {
 }
 
 dependencies {
-    compile group: 'com.github.samueltbrown', name: 'gradle-cucumber-plugin', version: '0.5'
-    compile group: 'junit', name: 'junit', version: '4.12'
+
     compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.11.0'
     compile "info.cukes:cucumber-java:1.2.4"
     compile "info.cukes:cucumber-core:1.2.4"

@@ -1,4 +1,4 @@
-package o2.co.uk.pages;
+package o2.co.uk.steps;
 
 public class BasketPageSteps {
 
