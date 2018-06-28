@@ -32,8 +32,4 @@ public class CommonPageSteps {
         return browser.getDriver();
     }
 
-    public void tearDown(){
-
-        driver().close();
-    }
 }

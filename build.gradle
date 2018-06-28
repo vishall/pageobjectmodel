@@ -21,8 +21,3 @@ dependencies {
 
 }
 
-test {
-    useTestNG(){
-        include "/home/vishalloke/IdeaProjects/pageobjectmodel/src/test/java/o2/co/uk"
-    }
-}
