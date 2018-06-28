@@ -3,6 +3,6 @@ Feature: Google website
   Scenario: Checking google home page
 
     Given I am on google home page
-    When I click in the search text box
-    And I entered a text to search box
+    When I entered a text Hello in the search box
+    And I hit the enter key to begin the search
     Then I can see respective search results

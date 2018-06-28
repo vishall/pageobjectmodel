@@ -14,30 +14,28 @@ public class TariffExtrasPage {
 
     private final PropertyReader propertyReader = new PropertyReader("config.properties");
 
-    private final By searchTextbox = By.className(propertyReader.getProperty("search.textbox"));
+    By searchTextbox = By.className("gsfi");
 
-    private final String texttoSearch = propertyReader.getProperty("text.to.search");
-
-    private final String searchResult = propertyReader.getProperty("search.result");
+    private final String result = "Results";
 
     public TariffExtrasPage(WebDriver driver) {
         this.driver = driver;
     }
 
-    public void enterDetailsInSearchBox(){
+    public void enterDetailsInSearchBox(String textToSearch){
 
-        driver.findElement(searchTextbox).sendKeys(texttoSearch);
+        driver.findElement(searchTextbox).sendKeys(textToSearch);
 
     }
 
-   public void enter_the_key_for_search(){
+   public void hitEnterKeyFromKeyboard(){
        WebElement textbox = driver.findElement(searchTextbox);
        textbox.sendKeys(Keys.RETURN);
    }
 
-   public void should_see_respective_search(){
+   public void shouldSeeRespectiveSearch(){
 
-       driver.getPageSource().contains(searchResult);
+       driver.getPageSource().contains(result);
    }
 
 }
