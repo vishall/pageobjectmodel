@@ -1,6 +1,5 @@
 package o2.co.uk.base;
 
-import cucumber.api.java.Before;
 import o2.co.uk.Utils.PropertyReader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

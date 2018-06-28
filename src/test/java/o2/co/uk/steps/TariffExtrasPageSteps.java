@@ -4,6 +4,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import o2.co.uk.Utils.PropertyReader;
 import o2.co.uk.base.CommonPageSteps;
 import o2.co.uk.pages.TariffExtrasPage;
 import org.openqa.selenium.WebDriver;
@@ -12,13 +13,16 @@ import org.openqa.selenium.WebDriver;
 public class TariffExtrasPageSteps extends CommonPageSteps {
 
 
+    private final PropertyReader propertyReader = new PropertyReader("config.properties");
     private static WebDriver driver= null;
+
+    private final String urltopen = propertyReader.getProperty("url.to.open");
 
     TariffExtrasPage tariffExtrasPage;
 
     @Given("^I am on google home page")
     public void i_am_on_google_home_page() throws Throwable {
-        browser().navigateToUrl("http://www.google.com");
+        browser().navigateToUrl(urltopen);
         tariffExtrasPage = new TariffExtrasPage(driver());
     }
 
@@ -37,6 +41,8 @@ public class TariffExtrasPageSteps extends CommonPageSteps {
     public void i_can_see_respective_search_results() throws Throwable {
 
         tariffExtrasPage.shouldSeeRespectiveSearch();
+
+
 
     }
 

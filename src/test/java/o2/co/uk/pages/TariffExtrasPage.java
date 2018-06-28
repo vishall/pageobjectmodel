@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
 
 
 public class TariffExtrasPage {
@@ -22,17 +23,19 @@ public class TariffExtrasPage {
         this.driver = driver;
     }
 
+    @Test
     public void enterDetailsInSearchBox(String textToSearch){
 
         driver.findElement(searchTextbox).sendKeys(textToSearch);
 
     }
 
+    @Test
    public void hitEnterKeyFromKeyboard(){
        WebElement textbox = driver.findElement(searchTextbox);
        textbox.sendKeys(Keys.RETURN);
    }
-
+   @Test
    public void shouldSeeRespectiveSearch(){
 
        driver.getPageSource().contains(result);
