@@ -12,11 +12,17 @@ repositories {
 }
 
 dependencies {
-
+    compile group: 'org.testng', name: 'testng', version: '6.14.3'
     compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.11.0'
     compile "info.cukes:cucumber-java:1.2.4"
     compile "info.cukes:cucumber-core:1.2.4"
     compile "info.cukes:cucumber-junit:1.2.4"
     compile 'info.cukes:gherkin:1.2.4'
 
+}
+
+test {
+    useTestNG(){
+        include "/home/vishalloke/IdeaProjects/pageobjectmodel/src/test/java/o2/co/uk"
+    }
 }

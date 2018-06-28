@@ -1,5 +1,6 @@
 package o2.co.uk.base;
 
+import cucumber.api.java.Before;
 import o2.co.uk.Utils.PropertyReader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,9 +16,9 @@ public class CommonPageSteps {
         if (browser == null) {
             WebDriver driver = null;
             String browserType = propertyReader.getProperty("browser");
-            if (browserType.equals("chrome")) {
+            if (browserType.equalsIgnoreCase("chrome")) {
                 driver = new ChromeDriver();
-            } else if (browserType.equals("Firefox")) {
+            } else if (browserType.equalsIgnoreCase("Firefox")) {
                 driver = new FirefoxDriver();
             }
 
@@ -29,5 +30,10 @@ public class CommonPageSteps {
 
     public WebDriver driver() {
         return browser.getDriver();
+    }
+
+    public void tearDown(){
+
+        driver().close();
     }
 }
